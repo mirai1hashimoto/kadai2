@@ -1,0 +1,13 @@
+<div>
+  <%= flash[:notice] %>
+</div>
+
+<% if @book.errors.any? %>
+  <%= @book.errors.count %>error
+  <ul>
+    <% @book.errors.full_messages.each do |message| %>
+      <li><%= message %></li>
+    <% end %>
+  </ul>
+<% end %>
+
